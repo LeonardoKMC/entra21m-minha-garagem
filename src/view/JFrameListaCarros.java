@@ -50,7 +50,6 @@ public class JFrameListaCarros extends JFrame implements JFrameComportamentosInt
         modelo.addColumn("Nome");
         modelo.addColumn("Placa");
         modelo.addColumn("Cor");
-        modelo.addColumn("Cor");
         popularJTable();
         jTable = new JTable(modelo);
         scroll = new JScrollPane(jTable);

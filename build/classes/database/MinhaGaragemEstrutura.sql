@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS carros (
     chassi VARCHAR(50),
 
     quilometragem FLOAT,
-    potencia FLOAT,
+    potencia VARCHAR,
 
     data_compra DATE,
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS carros (
 
     ano_fabricacao SMALLINT,
     ano_lancamento SMALLINT,
-    tipo_pneu SMALLINT,
+    tipo_pneu VARCHAR,
 
     renavam INT,
 

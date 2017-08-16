@@ -45,10 +45,10 @@ public class CarroDAO {
 
                     carro.setAnoFabricacao(resultSet.getShort("ano_fabricacao"));
                     carro.setAnoLancamento(resultSet.getShort("ano_lancamento"));
-                    carro.setTipoPneu(resultSet.getShort("tipo_pneu"));
+                    carro.setTipoPneu(resultSet.getString("tipo_pneu"));
 
                     carro.setQuilometragem(resultSet.getFloat("quilometragem"));
-                    carro.setPotencia(resultSet.getFloat("potencia"));
+                    carro.setPotencia(resultSet.getString("potencia"));
 
                     carro.setEstaFuncional(resultSet.getBoolean("esta_funcionando"));
                     carro.setPermitidaCirculacao(resultSet.getBoolean("permitida_circulacao"));
@@ -92,7 +92,7 @@ public class CarroDAO {
                 preparador.setString(4, carro.getPlaca());
                 preparador.setString(5, carro.getChassi());
                 preparador.setFloat(6, carro.getQuilometragem());
-                preparador.setFloat(7, carro.getPotencia());
+                preparador.setString(7, carro.getPotencia());
                 preparador.setDate(8, carro.getDataCompra());
                 preparador.setBoolean(9, carro.isEstaFuncional());
                 preparador.setBoolean(10, carro.isPermitidaCirculacao());
@@ -100,7 +100,7 @@ public class CarroDAO {
                 preparador.setByte(12, carro.getQuantidadeBatidas());
                 preparador.setShort(13, carro.getAnoFabricacao());
                 preparador.setShort(14, carro.getAnoLancamento());
-                preparador.setShort(15, carro.getTipoPneu());
+                preparador.setString(15, carro.getTipoPneu());
                 preparador.setInt(16, carro.getRenavam());
                 preparador.setString(17, carro.getDescricao());
                 preparador.execute();
@@ -152,7 +152,7 @@ public class CarroDAO {
             substituidor.setString(4, carro.getPlaca());
             substituidor.setString(5, carro.getChassi());
             substituidor.setFloat(6, carro.getQuilometragem());
-            substituidor.setFloat(7, carro.getPotencia());
+            substituidor.setString(7, carro.getPotencia());
             substituidor.setDate(8, carro.getDataCompra());
             substituidor.setBoolean(9, carro.isEstaFuncional());
             substituidor.setBoolean(10, carro.isPermitidaCirculacao());
@@ -160,7 +160,7 @@ public class CarroDAO {
             substituidor.setByte(12, carro.getQuantidadeBatidas());
             substituidor.setShort(13, carro.getAnoFabricacao());
             substituidor.setShort(14, carro.getAnoLancamento());
-            substituidor.setShort(15, carro.getTipoPneu());
+            substituidor.setString(15, carro.getTipoPneu());
             substituidor.setInt(16, carro.getRenavam());
             substituidor.setString(17, carro.getDescricao());
             substituidor.setInt(18, carro.getId());
@@ -227,9 +227,9 @@ public class CarroDAO {
                 carro.setChassi(resultado.getString("chassi"));
                 carro.setAnoFabricacao(resultado.getShort("ano_fabricacao"));
                 carro.setAnoLancamento(resultado.getShort("ano_lancamento"));
-                carro.setTipoPneu(resultado.getShort("tipo_pneu"));
+                carro.setTipoPneu(resultado.getString("tipo_pneu"));
                 carro.setQuilometragem(resultado.getFloat("quilometragem"));
-                carro.setPotencia(resultado.getFloat("potencia"));
+                carro.setPotencia(resultado.getString("potencia"));
                 carro.setEstaFuncional(resultado.getBoolean("esta_funcionando"));
                 carro.setPermitidaCirculacao(resultado.getBoolean("permitida_circulacao"));
                 carro.setQuantidadeBatidas(resultado.getByte("quantidade_batidas"));
