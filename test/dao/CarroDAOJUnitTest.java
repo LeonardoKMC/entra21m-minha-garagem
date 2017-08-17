@@ -26,12 +26,12 @@ public class CarroDAOJUnitTest {
        gol.setFabricante("VW");
        gol.setNome("Gol");
        gol.setPlaca("FLA-2017");
-       gol.setPotencia(100f);
+       gol.setPotencia("100");
        gol.setPermitidaCirculacao(true);
        gol.setQuantidadeBatidas((byte)0);
        gol.setQuantidadePortas((byte)4);
        gol.setQuilometragem(15887f);
-       gol.setTipoPneu((short)17);
+       gol.setTipoPneu("17");
        gol.setRenavam(198745);
       
        CarroDAO dao = new CarroDAO();
@@ -80,12 +80,12 @@ public class CarroDAOJUnitTest {
        gol.setFabricante("VW");
        gol.setNome("Gol");
        gol.setPlaca("FLA-2017");
-       gol.setPotencia(100f);
+       gol.setPotencia("100");
        gol.setPermitidaCirculacao(true);
        gol.setQuantidadeBatidas((byte)0);
        gol.setQuantidadePortas((byte)4);
        gol.setQuilometragem(15887f);
-       gol.setTipoPneu((short)17);
+       gol.setTipoPneu("17");
        gol.setRenavam(198745);
        
        CarroDAO dao = new CarroDAO();
@@ -112,12 +112,12 @@ public class CarroDAOJUnitTest {
        gol.setFabricante("VW");
        gol.setNome("Gol");
        gol.setPlaca("FLA-2017");
-       gol.setPotencia(100f);
+       gol.setPotencia("100");
        gol.setPermitidaCirculacao(true);
        gol.setQuantidadeBatidas((byte)0);
        gol.setQuantidadePortas((byte)4);
        gol.setQuilometragem(15887f);
-       gol.setTipoPneu((short)17);
+       gol.setTipoPneu("17");
        gol.setRenavam(198745);
        
        CarroDAO dao = new CarroDAO();
@@ -135,12 +135,12 @@ public class CarroDAOJUnitTest {
        gol.setFabricante("FIAT");
        gol.setNome("UNO");
        gol.setPlaca("SPF-2015");
-       gol.setPotencia(250f);
+       gol.setPotencia("250");
        gol.setPermitidaCirculacao(false);
        gol.setQuantidadeBatidas((byte)1);
        gol.setQuantidadePortas((byte)2);
        gol.setQuilometragem(14000f);
-       gol.setTipoPneu((short)15);
+       gol.setTipoPneu("17");
        gol.setRenavam(889988);
        dao.alterar(gol);
        
