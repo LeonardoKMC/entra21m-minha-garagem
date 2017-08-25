@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS carros (
     chassi VARCHAR(50),
 
     quilometragem FLOAT,
-    potencia VARCHAR,
+    potencia VARCHAR(100),
 
     data_compra DATE,
 
@@ -36,9 +36,23 @@ CREATE TABLE IF NOT EXISTS carros (
 
     ano_fabricacao SMALLINT,
     ano_lancamento SMALLINT,
-    tipo_pneu VARCHAR,
+    tipo_pneu VARCHAR(50),
 
     renavam INT,
 
     descricao TEXT
 );	
+
+# Excluir a tabela de categorias se existir
+DROP TABLE IF EXISTS categorias;
+
+# Criar tabela de categorias se ela não existir
+CREATE TABLE IF NOT EXISTS categorias(
+
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR (150) UNIQUE NOT NULL,# nao permite vazio e é unico 
+    descricao TEXT,
+    ativo BOOLEAN DEFAULT FALSE # vai conter o valor false caso não for passado nada no INSERIR
+);
+
+INSERT INTO categorias (nome) VALUE ("Executiva")

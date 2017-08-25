@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 public class JFrameInicial extends JFrame implements JFrameComportamentosInterface{
     private JButton jButtonListaCarro;
     private JButton jButtonCadastroCarro;
+    private JButton jButtonListaCategorias;
 
     
     public JFrameInicial(){
@@ -39,18 +40,21 @@ public class JFrameInicial extends JFrame implements JFrameComportamentosInterfa
     public void criarComponentes() {
         jButtonListaCarro = new JButton("Lista de Carros");
         jButtonCadastroCarro = new JButton("Cadastro de Carros");
+        jButtonListaCategorias = new JButton("Lista de Categorias");
     }
 
     @Override
     public void definirLocalizacao() {
         jButtonListaCarro.setBounds(10,10,200,35);
         jButtonCadastroCarro.setBounds(10, 55, 200, 35);
+        jButtonListaCategorias.setBounds(10, 100, 200, 35);
     }
 
     @Override
     public void adicionarComponentes() {
         add(jButtonListaCarro);
         add(jButtonCadastroCarro);
+        add(jButtonListaCategorias);
     }
 
     @Override
@@ -61,7 +65,9 @@ public class JFrameInicial extends JFrame implements JFrameComportamentosInterfa
         jButtonCadastroCarro.addActionListener((ActionEvent e) -> {
             new JFrameCadastroCarro().setVisible(true);
         });
+        jButtonListaCategorias.addActionListener((ActionEvent e) -> {
+            new JFrameListaCategorias().setVisible(true);
+        });
     }
-    
     
 }
