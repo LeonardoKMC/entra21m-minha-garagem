@@ -107,7 +107,7 @@ public class CategoriaDAO {
         return categorias;
     }
 
-    public Categoria buscarCAtegoriaPorId(int codigo) {
+    public Categoria buscarCategoriaPorId(int codigo) {
         Categoria categoria = null;
         String sql = "SELECT nome, descricao, ativo FROM categorias";
         sql += "\nWHERE id = ?";

@@ -179,7 +179,7 @@ public class JFrameListaCategorias extends javax.swing.JFrame {
         if(jTableCategoria.getSelectedRow()> -1){
             
             int id = Integer.parseInt (jTableCategoria.getValueAt(jTableCategoria.getSelectedRow(),0).toString());
-            Categoria categoria = new CategoriaDAO().buscarCAtegoriaPorId(id);
+            Categoria categoria = new CategoriaDAO().buscarCategoriaPorId(id);
             new JFrameCadastroCategoria(categoria).setVisible(true);
         }
     }//GEN-LAST:event_jButtonEditarActionPerformed

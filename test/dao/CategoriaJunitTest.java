@@ -36,7 +36,7 @@ public class CategoriaJunitTest {
     int codigoInserido = new CategoriaDAO().inserir(categoria);
     categoria.setId(codigoInserido);
     
-        Categoria categoriaBuscada = new CategoriaDAO().buscarCAtegoriaPorId(codigoInserido);
+        Categoria categoriaBuscada = new CategoriaDAO().buscarCategoriaPorId(codigoInserido);
         assertNotNull(categoriaBuscada);
         assertEquals(categoria.getId(), categoriaBuscada.getId());
         assertEquals(categoria.getNome(), categoriaBuscada.getNome());
@@ -62,7 +62,7 @@ public class CategoriaJunitTest {
     int codigoAlterar = new CategoriaDAO().alterar(categoria);
         assertNotSame(Utilitarios.NAO_FOI_POSSIVEL_ALTERAR, codigoAlterar);
         
-    Categoria categoriaBuscada = new CategoriaDAO().buscarCAtegoriaPorId(categoria.getId());
+    Categoria categoriaBuscada = new CategoriaDAO().buscarCategoriaPorId(categoria.getId());
         assertEquals(categoria.getId(),categoriaBuscada.getId());
         assertEquals(categoria.getNome(),categoriaBuscada.getNome());
         assertEquals(categoria.getDescricao(),categoriaBuscada.getDescricao());
